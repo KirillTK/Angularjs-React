@@ -8,8 +8,11 @@ export const AppNavComponent = {
   template: `
    <section>
         <react-test name-test="$ctrl.nameTest">
+     
    </section>
      <button ng-click="$ctrl.onClick()">On Click1231231232</button>
+        <home-component/>
+        <test-component></test-component>
  
   `,
   controller: class AppNavComponent {
