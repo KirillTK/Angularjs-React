@@ -7,13 +7,18 @@ export const AppComponent = {
         on-logout="$ctrl.logout($event);"
         button-title="{{$ctrl.button}}">
       </app-nav>
-      <storeProvider/>
+         <store-provider store="$ctrl.store"></store-provider>
         <ui-view></ui-view> 
     </div>
   `,
   controller: class AppComponent {
-    constructor() {
+    constructor($ngRedux) {
       'ngInject';
+      this.$ngRedux = $ngRedux;
+    }
+
+    $onInit() {
+      this.store = this.$ngRedux;
     }
   }
 };

@@ -6,7 +6,6 @@ export const AppNavComponent = {
     buttonTitle: '@'
   },
   template: `
-        <store-provider></store-provider>
         <home-component/>
   `,
   controller: class AppNavComponent {

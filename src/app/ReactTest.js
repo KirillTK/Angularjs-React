@@ -16,7 +16,6 @@ const AnotherComponent = () => {
 export const ReactTest = (props) => {
   const todos = useSelector(selectTodoList);
   const dispatch = useDispatch();
-  console.log(todos, props);
   const appendItem = () => {
     dispatch(addTodo('kirill'));
   };

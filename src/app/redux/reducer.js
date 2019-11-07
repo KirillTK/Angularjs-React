@@ -5,7 +5,6 @@ const initialState = ['1231232', '123'];
 export function TodosReducer(state = initialState, action) {
     switch(action.type) {
         case TODOS.ADD_TODO:
-            console.log({action});
             return [...state, action.payload];
         case TODOS.REMOVE_TODO:
             return [

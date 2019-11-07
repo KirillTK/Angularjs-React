@@ -2,6 +2,7 @@ import TodoActions from '../redux/actions'
 
 export default class HomeController {
     constructor($ngRedux) {
+        console.log($ngRedux, 'angularjs');
         this.todo = '';
         this.unsubscribe = $ngRedux.connect(this.mapStateToThis, TodoActions)(this);
     }
@@ -16,7 +17,6 @@ export default class HomeController {
     }
 
     mapStateToThis(state) {
-        console.log(state, 'state');
         return {
             todos: state.todos
         };
@@ -53,7 +53,7 @@ export const ReduxComponent = {
     </div>
 </div>  
   `,
-    controller: HomeTestController
+    controller: HomeController
 };
 
 
@@ -68,18 +68,16 @@ function HomeTestController($ngRedux) {
         vm.todos =  state.todos;
     });
 
-    console.log(vm.unsubscribe);
     vm.submitTodo = () => {
         vm.addTodo(this.todo);
         vm.todo = '';
     };
 
     vm.mapStateToThis = (state) => {
-        console.log(state, 'state');
         return {
             todos: state.todos
         };
     }
 }
 
-HomeTestController.$inject = ["$ngRedux"];
+    HomeTestController.$inject = ["$ngRedux"];
