@@ -41,6 +41,7 @@ angular
     .component(RootComponent.selector, RootComponent)
     .service('testService', testService)
     .component('reactTest', react2angular(ReactTest, ['nameTest'], ['testService']))
+    .component('storeProvider', react2angular(StoreProvider))
     .value('EventEmitter', payload => ({$event: payload}))
     .run(($transitions, cfpLoadingBar) => {
         'ngInject';

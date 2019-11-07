@@ -1,6 +1,6 @@
 import { TODOS } from './constants';
 
-function addTodo(todo){
+export function addTodo(todo){
     return {
         type: TODOS.ADD_TODO,
         payload: todo

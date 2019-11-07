@@ -1,7 +1,6 @@
 import { TODOS } from './constants';
 
-const initialState = [
-];
+const initialState = ['1231232', '123'];
 
 export function TodosReducer(state = initialState, action) {
     switch(action.type) {

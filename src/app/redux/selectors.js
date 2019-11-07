@@ -1,1 +1,4 @@
-export const selectTodoList = state => state.todos;
+export const selectTodoList = state => {
+    console.log(state, 'selector');
+    return state.RootReducer.todos;
+};
