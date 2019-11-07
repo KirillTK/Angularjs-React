@@ -7,10 +7,11 @@ import ngRedux from 'ng-redux';
 // bootstrap
 import {RootComponent} from './root.component';
 // modules
-import {CommonModule} from './common/common.module';
+import {CommonModule} from './components/common.module';
 import './root.component.scss';
 import {ReactTest} from "./ReactTest";
 import {RootReducer} from "./redux";
+import {StoreProvider} from "./redux/react-store-provider";
 
 const MODULE_NAME = 'root';
 const MODULE_IMPORTS = [
@@ -35,7 +36,6 @@ const testService = () =>    {
 angular
     .module(MODULE_NAME, MODULE_IMPORTS)
     .config(($ngReduxProvider) => {
-        console.log('here', $ngReduxProvider);
         $ngReduxProvider.createStoreWith(RootReducer,  [],window.__REDUX_DEVTOOLS_EXTENSION__ ? [window.__REDUX_DEVTOOLS_EXTENSION__()] : []);
     })
     .component(RootComponent.selector, RootComponent)

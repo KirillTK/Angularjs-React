@@ -1,7 +1,6 @@
 import { TODOS } from './constants';
 
 const initialState = [
-    {name: 'kirill',}
 ];
 
 export function TodosReducer(state = initialState, action) {

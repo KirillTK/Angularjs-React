@@ -1,12 +1,12 @@
 import angular from 'angular';
 
 // containers
-import {AppComponent} from './containers/app/app.component';
+import {AppComponent} from './app.component';
 // components
-import {AppNavComponent} from './components/app-nav/app-nav.component';
+import {AppNavComponent} from './app-nav/app-nav.component';
 
 // styles
-import './components/app-nav/app-nav.component.scss';
+import './app-nav/app-nav.component.scss';
 import {ReduxComponent} from "../redux-component/controller";
 
 const MODULE_NAME = 'common';
@@ -31,7 +31,5 @@ export const CommonModule = angular
 
         $locationProvider.hashPrefix('');
         $locationProvider.html5Mode(true);
-
-        $urlRouterProvider.otherwise('/app');
     })
     .name;
