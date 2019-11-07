@@ -7,8 +7,9 @@ export const AppComponent = {
         on-logout="$ctrl.logout($event);"
         button-title="{{$ctrl.button}}">
       </app-nav>
-         <store-provider store="$ctrl.store"></store-provider>
-        <ui-view></ui-view> 
+         <store-provider store="$ctrl.store">
+            <ui-view></ui-view> 
+        </store-provider>
     </div>
   `,
   controller: class AppComponent {

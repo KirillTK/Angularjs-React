@@ -31,5 +31,6 @@ export const CommonModule = angular
 
         $locationProvider.hashPrefix('');
         $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/app');
     })
     .name;

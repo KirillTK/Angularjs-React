@@ -13,6 +13,7 @@ export const StoreProvider = ({store}) => {
             <Router>
                 <Switch>
                     <Route exact path="/app" component={ReactTest}/>
+                    <Route exact path="/app2" component={ReactTest}/>
                 </Switch>
             </Router>
         </ConnectedRouter>
